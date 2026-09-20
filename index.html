@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Newsletter Signup Modal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            NovaMail
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="nav-button" id="openModalBtn">
+            Join Newsletter
+        </button>
+
+    </header>
+
+
+    <!-- ================================
+         HERO SECTION
+    ================================= -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    ✨ Stay Updated
+                </div>
+
+                <h1>
+                    Ideas Worth
+                    <span>Reading.</span>
+                </h1>
+
+                <p>
+                    Get fresh insights, useful tips and the latest web
+                    development resources delivered straight to your inbox.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" id="heroSubscribe">
+                        Subscribe Now
+                        <span>→</span>
+                    </button>
+
+                    <button class="secondary-btn">
+                        Explore More
+                    </button>
+
+                </div>
+
+                <div class="trusted">
+
+                    <div class="avatars">
+                        <span>V</span>
+                        <span>A</span>
+                        <span>R</span>
+                        <span>+</span>
+                    </div>
+
+                    <p>
+                        Trusted by <strong>10,000+</strong> readers
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Illustration -->
+
+            <div class="hero-card">
+
+                <div class="card-glow"></div>
+
+                <div class="newsletter-card">
+
+                    <div class="mail-icon">
+                        ✉
+                    </div>
+
+                    <h3>
+                        Weekly Inspiration
+                    </h3>
+
+                    <p>
+                        Discover something new every week.
+                    </p>
+
+                    <div class="fake-input">
+                        your@email.com
+                    </div>
+
+                    <div class="fake-button">
+                        Subscribe →
+                    </div>
+
+                    <small>
+                        No spam. Unsubscribe anytime.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             FEATURES
+        ================================= -->
+
+        <section class="features" id="features">
+
+            <div class="section-heading">
+
+                <span>WHY SUBSCRIBE</span>
+
+                <h2>
+                    Everything worth knowing,
+                    <br>
+                    delivered to you.
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">💡</div>
+
+                    <h3>Fresh Ideas</h3>
+
+                    <p>
+                        Discover practical ideas and useful resources
+                        every week.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">⚡</div>
+
+                    <h3>Quick Reads</h3>
+
+                    <p>
+                        Short, valuable content that respects your time.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🔒</div>
+
+                    <h3>No Spam</h3>
+
+                    <p>
+                        Your inbox stays clean. We only send meaningful
+                        updates.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         NEWSLETTER MODAL
+    ================================= -->
+
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="modal" id="newsletterModal">
+
+            <!-- Close Button -->
+
+            <button
+                class="close-btn"
+                id="closeModalBtn"
+                aria-label="Close modal"
+            >
+                ×
+            </button>
+
+
+            <!-- Modal Content -->
+
+            <div id="formContent">
+
+                <div class="modal-icon">
+                    ✉️
+                </div>
+
+                <div class="modal-badge">
+                    FREE NEWSLETTER
+                </div>
+
+                <h2>
+                    Stay in the loop.
+                </h2>
+
+                <p class="modal-description">
+                    Get weekly tips, useful resources and fresh ideas
+                    delivered straight to your inbox.
+                </p>
+
+
+                <!-- Signup Form -->
+
+                <form id="newsletterForm" novalidate>
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+                    <p
+                        class="error-message"
+                        id="errorMessage"
+                    ></p>
+
+
+                    <button
+                        type="submit"
+                        class="subscribe-btn"
+                    >
+                        Subscribe to Newsletter
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <div class="privacy">
+
+                    <span>🔒</span>
+
+                    <p>
+                        We respect your privacy. No spam, ever.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Success Message -->
+
+            <div
+                class="success-content"
+                id="successContent"
+            >
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h2>
+                    You're all set!
+                </h2>
+
+                <p>
+                    Thanks for subscribing. Keep an eye on your inbox
+                    for our next newsletter.
+                </p>
+
+                <button
+                    class="success-btn"
+                    id="successCloseBtn"
+                >
+                    Continue Exploring
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer id="about">
+
+        <div class="footer-logo">
+            <span>✦</span>
+            NovaMail
+        </div>
+
+        <p>
+            Learn something new. Stay inspired.
+        </p>
+
+        <p class="copyright">
+            © 2026 NovaMail. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
